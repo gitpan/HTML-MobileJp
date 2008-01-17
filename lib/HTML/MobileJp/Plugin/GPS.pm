@@ -45,15 +45,17 @@ my $codes = +{
     H => +{
         basic => sub {
             # http://www.willcom-inc.com/ja/service/contents_service/club_air_edge/for_phone/homepage/index.html
+            # DO NOT uri_escape. WILLCOM PHONES REQUIRE RAW URI.
             +{      href => 'http://location.request/dummy.cgi?my='
-                  . uri_escape( $_[0] )
+                  . $_[0]
                   . '&pos=$location' };
         },
     },
     V => +{
         gps => sub {
             # http://developers.softbankmobile.co.jp/dp/tool_dl/web/position.php
-            +{ href => 'location:auto?url=' . uri_escape($_[0]) };
+            # DO NOT uri_escape. SOFTBANK PHONES REQUIRE RAW URI.
+            +{ href => 'location:auto?url=' . $_[0] };
         },
         basic => sub {
             # http://developers.softbankmobile.co.jp/dp/tool_dl/web/position.php
@@ -99,7 +101,7 @@ sub gps_a {
 1;
 __END__
 
-=for stopwords mobile-jp html TODO CGI ezweb
+=for stopwords mobile-jp html TODO CGI ezweb GPS
 
 =encoding utf8
 
