@@ -3,6 +3,7 @@ abstract: generate mobile-jp html tags
 author: Tokuhiro Matsuno <tokuhirom aaaatttt gmail dotottto commmmm>
 build_requires: 
   Test::More: 0
+  YAML: 0
 distribution_type: module
 generated_by: Module::Install version 0.650
 license: perl
@@ -18,4 +19,4 @@ requires:
   HTML::Entities: 0
   Params::Validate: 0
   URI::Escape: 0
-version: 0.02
+version: 0.04
