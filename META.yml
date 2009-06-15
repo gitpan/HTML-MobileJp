@@ -1,22 +1,31 @@
---- 
-abstract: generate mobile-jp html tags
-author: Tokuhiro Matsuno <tokuhirom aaaatttt gmail dotottto commmmm>
-build_requires: 
+---
+abstract: 'generate mobile-jp html tags'
+author:
+  - 'Tokuhiro Matsuno <tokuhirom aaaatttt gmail dotottto commmmm>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+  Test::Base: 0
   Test::More: 0
   YAML: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: Module::Install version 0.650
+generated_by: 'Module::Install version 0.91'
 license: perl
-meta-spec: 
-  url: http://module-build.sourceforge.net/META-spec-v1.3.html
-  version: 1.3
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
 name: HTML-MobileJp
-no_index: 
-  directory: 
+no_index:
+  directory:
     - inc
     - t
-requires: 
-  HTML::Entities: 0
-  Params::Validate: 0
-  URI::Escape: 0
-version: 0.04
+requires:
+  Filter::Util::Call: 0
+  HTML::Entities: 1.35
+  Params::Validate: 0.89
+  URI::Escape: 3.29
+  perl: 5.8.0
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.06
